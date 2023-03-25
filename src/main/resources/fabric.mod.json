@@ -10,7 +10,7 @@
 	"icon": "assets/umu_debugger/icon.png",
 	"environment": "*",
 	"entrypoints": {
-		"client": [ "io.github.zemelua.umu_debugger.client.Umu_debuggerClient" ], "main": [
+		"client": [ "io.github.zemelua.umu_debugger.client.UMUDebuggerClient" ], "main": [
 			"io.github.zemelua.umu_debugger.UMUDebugger"
 		]
 	},
