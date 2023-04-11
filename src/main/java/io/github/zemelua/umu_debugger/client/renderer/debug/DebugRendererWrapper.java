@@ -4,7 +4,7 @@ import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.debug.DebugRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 
-public class DebugRendererWrapper implements DebugRenderer.Renderer, IDebugRendererWrapper {
+public class DebugRendererWrapper implements IDebugRendererWrapper {
 	private final DebugRenderer.Renderer renderer;
 	private boolean active;
 
@@ -14,7 +14,7 @@ public class DebugRendererWrapper implements DebugRenderer.Renderer, IDebugRende
 
 	@Override
 	public void render(MatrixStack matrices, VertexConsumerProvider vertexConsumers, double cameraX, double cameraY, double cameraZ) {
-
+		this.renderer.render(matrices, vertexConsumers, cameraX, cameraY, cameraZ);
 	}
 
 	@Override

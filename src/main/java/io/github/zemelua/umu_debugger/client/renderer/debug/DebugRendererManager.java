@@ -34,6 +34,10 @@ public class DebugRendererManager {
 		return Optional.ofNullable(this.renderers.get(id));
 	}
 
+	public Stream<IDebugRendererWrapper> getAll() {
+		return this.renderers.values().stream();
+	}
+
 	public Stream<Identifier> getAllID() {
 		return this.renderers.keySet().stream();
 	}
