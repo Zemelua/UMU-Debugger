@@ -14,7 +14,9 @@ public class DebugRendererWrapper implements IDebugRendererWrapper {
 
 	@Override
 	public void render(MatrixStack matrices, VertexConsumerProvider vertexConsumers, double cameraX, double cameraY, double cameraZ) {
-		this.renderer.render(matrices, vertexConsumers, cameraX, cameraY, cameraZ);
+		if (this.active) {
+			this.renderer.render(matrices, vertexConsumers, cameraX, cameraY, cameraZ);
+		}
 	}
 
 	@Override
